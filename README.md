@@ -10,9 +10,9 @@ This is the artifact for _RFCScope: Detecting Logically Ambiguous Bugs in Intern
 
 - The `study/categories.md` file contains the categorization of the errata in `study/all_errata.md`. We omit the errata from the _Other_ category in this file. The errata are divided into the subcategories of _Inconsistency_ and _Under-specification_.
 
-### Evaluation
+### Tool
 
-- The `evaluation/prompts` directory contains the prompts used in RFCScope for the evaluation of RFCs. This directory has the following structure.
+- The `tool/prompts` directory contains the prompts used in RFCScope for the analysis of RFCs. This directory has the following structure.
   - `system-prompts/`: Contains the system prompts used in RFCScope.
     - `inconsistency/`: Contains the system prompts for the inconsistency analysis.
       - `analyzer.md`: The system prompt for the analyzer.
@@ -24,4 +24,6 @@ This is the artifact for _RFCScope: Detecting Logically Ambiguous Bugs in Intern
     - `analyzer.md`: The user prompt for the analyzer.
     - `evaluator.md`: The user prompt for the evaluator.
 
-- The `evaluation/selected-errata/` directory contains the errata selected after manual inspection of the results from RFCScope. The directory contains a subdirectory for each RFC that has selected errata. Each errata is stored as a markdown file in the subdirectory. This file contains the errata report and its categorization. There are a total of 31 errata reports across 14 RFCs.
+### Evaluation
+
+- The `evaluation/discovered-errata/` directory contains the errata selected after manual inspection of the results from RFCScope. The directory contains a subdirectory for each RFC that has discovered errata. Each errata is stored as a markdown file in the subdirectory. This file contains the errata report and its categorization. There are a total of 31 errata reports across 14 RFCs.
