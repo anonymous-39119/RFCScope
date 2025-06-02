@@ -6,24 +6,42 @@ This is the artifact for _RFCScope: Detecting Logically Ambiguous Bugs in Intern
 
 ### Observations from study of RFC Errata
 
-- The `study/all_errata.md` file contains all the 273 errata that we considered in our study. For each erratum, the file contains the original text of the erratum, the RFC number, the date of the publication of the RFC, and an explanation of the erratum added by us. These errata belong to the Standards Track RFCs published from January, 2014 to January, 2025.
+The `studied-errata/` directory contains the errata considered in our study. The directory has the following structure.
 
-- The `study/categories.md` file contains the categorization of the errata in `study/all_errata.md`. We omit the errata from the _Other_ category in this file. The errata are divided into the subcategories of _Inconsistency_ and _Under-specification_.
+- `I-1/`: Contains the errata from the **Direct inconsistency** category (119 items).
+- `I-2/`: Contains the errata from the **Indirect inconsistency** category (70 items).
+- `I-3/`: Contains the errata from the **Inconsistency with common knowledge** category (13 items).
+- `U-1/`: Contains the errata from the **Direct under-specification (undefined terms)** category (7 items).
+- `U-2/`: Contains the errata from the **Direct under-specification (incomplete constraints)** category (15 items).
+- `U-3/`: Contains the errata from the **Indirect under-specification** category (10 items).
+- `U-4/`: Contains the errata from the **Incorrect/missing references** category (5 items).
 
-### Tool
+We have omitted errata from the **Other** category in this artifact. Each subdirectory contains files named as `Errata<errata-id>-RFC<rfc-number>.md`. Each file contains the original text of the erratum, details of the RFC, a link to the original errata report on the IETF Errata portal, and an explanation of the erratum added by us. The errata belong to the Standards Track RFCs published from January, 2014 to January, 2025.
 
-- The `tool/prompts` directory contains the prompts used in RFCScope for the analysis of RFCs. This directory has the following structure.
-  - `system-prompts/`: Contains the system prompts used in RFCScope.
-    - `inconsistency/`: Contains the system prompts for the inconsistency analysis.
-      - `analyzer.md`: The system prompt for the analyzer.
-      - `evaluator.md`: The system prompt for the evaluator.
-    - `under-specification/`: Contains the system prompts for the under-specification analysis.
-      - `analyzer.md`: The system prompt for the analyzer.
-      - `evaluator.md`: The system prompt for the evaluator.
-  - `user-prompts/`: Contains the user prompts used in RFCScope. The user prompts are templates that are filled with the inputs as indicated in the file.
-    - `analyzer.md`: The user prompt for the analyzer.
-    - `evaluator.md`: The user prompt for the evaluator.
+### LLM prompts used in RFCScope
 
-### Evaluation
+The `prompts/` directory contains the prompts used in RFCScope for the analysis of RFCs. This directory has the following structure.
 
-- The `evaluation/discovered-errata/` directory contains the errata selected after manual inspection of the results from RFCScope. The directory contains a subdirectory for each RFC that has discovered errata. Each errata is stored as a markdown file in the subdirectory. This file contains the errata report and its categorization. There are a total of 31 errata reports across 14 RFCs.
+- `system-prompts/`: Contains the system prompts used in RFCScope.
+  - `inconsistency/`: Contains the system prompts for the inconsistency analysis.
+    - `analyzer.md`: The system prompt for the analyzer.
+    - `evaluator.md`: The system prompt for the evaluator.
+  - `under-specification/`: Contains the system prompts for the under-specification analysis.
+    - `analyzer.md`: The system prompt for the analyzer.
+    - `evaluator.md`: The system prompt for the evaluator.
+- `user-prompts/`: Contains the user prompts used in RFCScope. The user prompts are templates that are filled with the inputs as indicated in the file.
+  - `analyzer.md`: The user prompt for the analyzer.
+  - `evaluator.md`: The user prompt for the evaluator.
+
+### Bugs detected by RFCScope
+
+The `detected-bugs/` directory contains the errata selected after manual inspection of the results from RFCScope. The directory contains a file for each detected errata. The files are named as `RFC<number>-<id>.md` when there are multiple errata for the same RFC, or as `RFC<number>.md` when there is only one erratum for the RFC. In total, there are 31 bugs detected across 14 RFCs. Each file in this directory contains the bug report, its categorization, and its confirmation status. These statuses are listed below.
+
+- **Submitted to IETF Errata portal and verified**:
+  - `detected-bugs/RFC9445.md`
+  - `detected-bugs/RFC9619.md`
+- **Confirmed by RFC authors**:
+  - `detected-bugs/RFC9224-2.md`
+  - `detected-bugs/RFC9460-3.md`
+  - `detected-bugs/RFC9464.md`
+  - `detected-bugs/RFC9471.md`
