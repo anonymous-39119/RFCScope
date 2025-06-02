@@ -35,7 +35,7 @@ The `prompts/` directory contains the prompts used in RFCScope for the analysis 
 
 ### Bugs detected by RFCScope
 
-The `detected-bugs/` directory contains the errata selected after manual inspection of the results from RFCScope. The directory contains a file for each detected errata. The files are named as `RFC<number>-<id>.md` when there are multiple errata for the same RFC, or as `RFC<number>.md` when there is only one erratum for the RFC. In total, there are 31 bugs detected across 14 RFCs. Each file in this directory contains the bug report, its categorization, and its confirmation status. These statuses are listed below.
+The `detected-bugs/` directory contains the bugs selected after manual inspection of the results from RFCScope. The directory contains a file for each detected bug. The files are named as `RFC<number>-<id>.md` when there are multiple bugs for the same RFC, or as `RFC<number>.md` when there is only one bug for the RFC. In total, there are 31 bugs detected across 14 RFCs. Each file in this directory contains the bug report, its categorization, and its confirmation status. These statuses are listed below.
 
 - **Submitted to IETF Errata portal and verified**:
   - `detected-bugs/RFC9445.md`
