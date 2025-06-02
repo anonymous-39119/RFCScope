@@ -35,13 +35,9 @@ The `prompts/` directory contains the prompts used in RFCScope for the analysis 
 
 ### Bugs detected by RFCScope
 
-The `detected-bugs/` directory contains the bugs selected after manual inspection of the results from RFCScope. The directory contains a file for each detected bug. The files are named as `RFC<number>-<id>.md` when there are multiple bugs for the same RFC, or as `RFC<number>.md` when there is only one bug for the RFC. In total, there are 31 bugs detected across 14 RFCs. Each file in this directory contains the bug report, its categorization, and its confirmation status. These statuses are listed below.
+The `detected-bugs/` directory contains the bugs selected after manual inspection of the results from RFCScope. The directory contains a file for each detected bug. The files are named as `RFC<number>-<id>.md` when there are multiple bugs for the same RFC, or as `RFC<number>.md` when there is only one bug for the RFC. In total, there are 31 bugs detected across 14 RFCs. Each file in this directory contains the bug report, its categorization, and its confirmation status. The following statuses have been used:
 
-- **Submitted to IETF Errata portal and verified**:
-  - `detected-bugs/RFC9445.md`
-  - `detected-bugs/RFC9619.md`
-- **Confirmed by RFC authors**:
-  - `detected-bugs/RFC9224-2.md`
-  - `detected-bugs/RFC9460-3.md`
-  - `detected-bugs/RFC9464.md`
-  - `detected-bugs/RFC9471.md`
+- **Pending**: We have not yet reached out to the RFC authors regarding the bug.
+- **Awaiting response from authors**: We have reached out to the RFC authors regarding the bug and are awaiting their response.
+- **Confirmed by authors**: We received a response from the RFC authors confirming the bug.
+- **Verified on the IETF Errata portal**: The bug has been confirmed by the RFC authors, and is now submitted and verified on the IETF Errata portal.
