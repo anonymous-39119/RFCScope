@@ -41,3 +41,7 @@ The `detected-bugs/` directory contains the bugs selected after manual inspectio
 - **Awaiting response from authors**: We have reached out to the RFC authors regarding the bug and are awaiting their response.
 - **Confirmed by authors**: We received a response from the RFC authors confirming the bug.
 - **Verified on the IETF Errata portal**: The bug has been confirmed by the RFC authors, and is now submitted and verified on the IETF Errata portal.
+
+### Implementation of RFCScope
+
+The `RFCScope/` directory contains our implementation of the _RFCScope_ tool. Please head over to that directory for instructions on running the tool.
