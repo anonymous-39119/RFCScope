@@ -1,7 +1,7 @@
 import os
 import argparse
 
-from context_constructor.analyze_rfcs import main as analyze
+from utils.analyze_rfcs import main as analyze
 
 parser = argparse.ArgumentParser(description="Analyze an RFC")
 parser.add_argument("rfc_number", type=str, help="The RFC number of the RFC to analyze")
